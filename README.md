@@ -7,7 +7,7 @@ This is a very early Version , a lot of Cards drop rates and places found might 
 Known issues:
 Blurry Images ( not something i can change currently)
 
-#How to add to the Game
+How to add to the Game
 Step 1:
 Install JsonLoader and CardApi and follow their install instructions
 
