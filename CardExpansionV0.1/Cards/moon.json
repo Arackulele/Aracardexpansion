@@ -1,0 +1,14 @@
+{
+  "name": "smallmoon",
+  "displayedName": "Mini Moon",
+  "description": "A tiny recreation of a Moon, an interesting Card.",
+  "metaCategories": ["Rare" ],
+  "cardComplexity": "Intermediate",
+  "temple": "Nature",
+  "baseAttack": 2,
+  "baseHealth": 8,
+  "cost": 4,
+  "bonesCost": 0,
+  "abilities": [ "AllStrike"],
+  "texture": "fish.png"
+}

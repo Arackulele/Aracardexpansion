@@ -1,0 +1,15 @@
+{
+  "name": "Owl",
+  "displayedName": "Owl",
+  "description": "The angry Owl, it is better to not disturb it.",
+  "metaCategories": [ "ChoiceNode", "TraderOffer"],
+  "cardComplexity": "Intermediate",
+  "temple": "Nature",
+  "baseAttack": 2,
+  "baseHealth": 2,
+  "cost": 2,
+  "bonesCost": 0,
+  "abilities": [ "Sharp", "Flying"],
+  "texture": "fish.png",
+  "tribes": [ "Bird" ]
+}

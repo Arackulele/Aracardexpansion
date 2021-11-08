@@ -1,0 +1,17 @@
+{
+  "name": "Elk_leader",
+  "displayedName": "Alpha Elk",
+  "description": "The Alpha Elk, incredibly strong but not for long.",
+  "metaCategories": [ "ChoiceNode", "TraderOffer" ],
+  "cardComplexity": "Intermediate",
+  "temple": "Nature",
+  "baseAttack": 3,
+  "baseHealth": 5,
+  "cost": 2,
+  "bonesCost": 0,
+  "abilities": [ "Evolve","Deathtouch"],
+  "evolve_evolutionName": "elk_old",
+  "evolve_turnsToEvolve":  1,
+  "texture": "elk_alpha.png",
+  "tribes": [ "Hooved" ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "Snake_corn",
+  "displayedName": "Corn Snake",
+  "description": "The boring Corn Snake,it never comes alone and it loves Bones.",
+  "metaCategories": ["Rare" ],
+  "cardComplexity": "Intermediate",
+  "temple": "Nature",
+  "baseAttack": 2,
+  "baseHealth": 1,
+  "cost": 0,
+  "bonesCost": 4,
+  "abilities": [ "DrawCopy", "BoneDigger"],
+  "texture": "cornsnake.png",
+  "appearanceBehaviour": [ "RareCardBackground"],
+  "tribes": [ "Reptile" ]
+}

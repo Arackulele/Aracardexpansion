@@ -1,0 +1,17 @@
+{
+  "name": "Worker_ant",
+  "displayedName": "Worker Ant",
+  "description": "A strengthy member of the colony,used to doing the heavy lifting.",
+  "metaCategories": [ "ChoiceNode", "TraderOffer" ],
+  "cardComplexity": "Intermediate",
+  "temple": "Nature",
+  "baseAttack": 0,
+  "baseHealth": 3,
+  "cost": 2,
+  "bonesCost": 0,
+  "abilities": [ "WhackAMole"],
+  "texture": "fish.png",
+    "traits": ["Ant"],
+    "specialStatIcon": "Ants",
+    "specialAbilities": ["Ant"]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Screeching_ant",
+  "displayedName": "Screeching Ant",
+  "description": "When this Creature Screams, there will soon be more.",
+  "metaCategories": [ "ChoiceNode", "TraderOffer" ],
+  "cardComplexity": "Intermediate",
+  "temple": "Nature",
+  "baseAttack": 0,
+  "baseHealth": 2,
+  "cost": 2,
+  "bonesCost": 0,
+  "abilities": [ "DrawCopy"],
+  "texture": "fish.png",
+    "traits": ["Ant"],
+    "specialStatIcon": "Ants",
+    "specialAbilities": ["Ant"]
+}
