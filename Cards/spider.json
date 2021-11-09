@@ -1,0 +1,15 @@
+{
+  "name": "Spider",
+  "displayedName": "Spider",
+  "description": "The fragile Spider,no matter what is done it seems to always stand up again.",
+  "metaCategories": [ "ChoiceNode", "TraderOffer" ],
+  "cardComplexity": "Intermediate",
+  "temple": "Nature",
+  "baseAttack": 0,
+  "baseHealth": 2,
+  "cost": 1,
+  "bonesCost": 0,
+  "abilities": [ "DrawCopyOnDeath"],
+  "texture": "spoodar.png",
+  "tribes": [ "Insect" ]
+}

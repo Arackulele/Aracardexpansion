@@ -1,0 +1,17 @@
+{
+  "name": "Bullet_ant",
+  "displayedName": "Bullet Ant",
+  "description": "An eerie ctreature, seems to enjoy the company of other Ants.",
+  "metaCategories": [ "ChoiceNode", "TraderOffer" ],
+  "cardComplexity": "Intermediate",
+  "temple": "Nature",
+  "baseAttack": 0,
+  "baseHealth": 1,
+  "cost": 0,
+  "bonesCost": 3,
+  "abilities": [ "CorpseEater"],
+  "texture": "bulletant.png",
+    "traits": ["Ant"],
+    "specialStatIcon": "Ants",
+    "specialAbilities": ["Ant"]
+}

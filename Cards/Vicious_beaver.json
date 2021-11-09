@@ -1,0 +1,14 @@
+{
+  "name": "Vicious_Beaver",
+  "displayedName": "Vicious Beaver",
+  "description": "A cruel Creature, creating Spiked Dams it kills its prey",
+  "metaCategories": [ "ChoiceNode", "TraderOffer"],
+  "cardComplexity": "Intermediate",
+  "temple": "Nature",
+  "baseAttack": 1,
+  "baseHealth": 1,
+  "cost": 2,
+  "bonesCost": 0,
+  "abilities": [ "CreateDams","BuffNeighbours"],
+  "texture": "beaver.png"
+}
