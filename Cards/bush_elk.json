@@ -3,7 +3,7 @@
   "displayedName": "Bush Elk",
   "description": "A coward.The Bush Elk does not care for rules",
   "metaCategories": [ "ChoiceNode", "TraderOffer"],
-  "cardComplexity": "Intermediate",
+  "cardComplexity": "Simple",
   "temple": "Nature",
   "baseAttack": 1,
   "baseHealth": 1,

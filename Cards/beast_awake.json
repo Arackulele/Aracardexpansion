@@ -2,7 +2,7 @@
   "name": "beast_awake",
   "displayedName": "Awoken Beast",
   "description": "lets hope this works!",
-  "cardComplexity": "Intermediate",
+  "cardComplexity": "Advanced",
   "temple": "Nature",
   "baseAttack": 2,
   "baseHealth": 3,

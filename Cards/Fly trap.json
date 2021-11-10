@@ -3,7 +3,7 @@
   "displayedName": "Fly Trap",
   "description": "Not a creature, but a Plant.Do not tread on it",
   "metaCategories": [ "ChoiceNode", "TraderOffer"],
-  "cardComplexity": "Intermediate",
+  "cardComplexity": "Vanilla",
   "temple": "Nature",
   "baseAttack": 0,
   "baseHealth": 2,

@@ -6,7 +6,7 @@
   "cardComplexity": "Intermediate",
   "temple": "Nature",
   "baseAttack": 3,
-  "baseHealth": 4,
+  "baseHealth": 3,
   "cost": 2,
   "bonesCost": 0,
   "abilities": [ "Evolve","Deathtouch"],

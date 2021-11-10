@@ -3,7 +3,7 @@
   "displayedName": "Ant Soldier",
   "description": "A strengthy member of the colony,used to doing the heavy lifting.",
   "metaCategories": [ "ChoiceNode", "TraderOffer" ],
-  "cardComplexity": "Intermediate",
+  "cardComplexity": "Vanilla",
   "temple": "Nature",
   "baseAttack": 0,
   "baseHealth": 3,

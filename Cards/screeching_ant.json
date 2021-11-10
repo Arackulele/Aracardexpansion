@@ -3,7 +3,7 @@
   "displayedName": "Screeching Ant",
   "description": "When this Creature Screams, there will soon be more.",
   "metaCategories": [ "ChoiceNode", "TraderOffer" ],
-  "cardComplexity": "Intermediate",
+  "cardComplexity": "Advanced",
   "temple": "Nature",
   "baseAttack": 0,
   "baseHealth": 2,

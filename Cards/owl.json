@@ -3,7 +3,7 @@
   "displayedName": "Owl",
   "description": "The angry Owl, it is better to not disturb it.",
   "metaCategories": [ "ChoiceNode", "TraderOffer"],
-  "cardComplexity": "Intermediate",
+  "cardComplexity": "Simple",
   "temple": "Nature",
   "baseAttack": 2,
   "baseHealth": 2,

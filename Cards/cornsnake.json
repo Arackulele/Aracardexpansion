@@ -3,7 +3,7 @@
   "displayedName": "Corn Snake",
   "description": "The boring Corn Snake,it never comes alone and it loves Bones.",
   "metaCategories": ["Rare" ],
-  "cardComplexity": "Intermediate",
+  "cardComplexity": "Advanced",
   "temple": "Nature",
   "baseAttack": 2,
   "baseHealth": 1,

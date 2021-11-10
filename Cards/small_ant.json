@@ -3,7 +3,7 @@
   "displayedName": "Tiny Ant",
   "description": "A laughable creature,soon it will become a little bit less laughable.",
   "metaCategories": [ "ChoiceNode", "TraderOffer" ],
-  "cardComplexity": "Intermediate",
+  "cardComplexity": "Vanilla",
   "temple": "Nature",
   "baseAttack": 0,
   "baseHealth": 1,
