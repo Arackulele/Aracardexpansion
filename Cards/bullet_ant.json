@@ -8,7 +8,7 @@
   "baseAttack": 0,
   "baseHealth": 1,
   "cost": 0,
-  "bonesCost": 3,
+  "bonesCost": 6,
   "abilities": [ "CorpseEater"],
   "texture": "bulletant.png",
     "traits": ["Ant"],

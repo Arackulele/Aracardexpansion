@@ -1,0 +1,15 @@
+{
+  "name": "bush_elk",
+  "displayedName": "Bush Elk",
+  "description": "A coward.The Bush Elk does not care for rules",
+  "metaCategories": [ "ChoiceNode", "TraderOffer"],
+  "cardComplexity": "Intermediate",
+  "temple": "Nature",
+  "baseAttack": 1,
+  "baseHealth": 1,
+  "cost": 1,
+  "bonesCost": 0,
+  "abilities": ["Sniper"],
+  "tribes": [ "Hooved" ],
+  "texture": "bushelk.png"
+}

@@ -1,0 +1,14 @@
+{
+  "name": "Blobfish",
+  "displayedName": "Blobfish",
+  "description": "Useless Creature, you can have it.Why does it look like that?",
+  "metaCategories": [ "ChoiceNode", "TraderOffer"],
+  "cardComplexity": "Intermediate",
+  "temple": "Nature",
+  "baseAttack": 1,
+  "baseHealth": 8,
+  "cost": 3,
+  "bonesCost": 0,
+  "abilities": [ "SquirrelStrafe"],
+  "texture": "blobfish.png"
+}

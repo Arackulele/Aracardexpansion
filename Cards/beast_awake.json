@@ -1,0 +1,16 @@
+{
+  "name": "beast_awake",
+  "displayedName": "Awoken Beast",
+  "description": "lets hope this works!",
+  "cardComplexity": "Intermediate",
+  "temple": "Nature",
+  "baseAttack": 2,
+  "baseHealth": 3,
+  "cost": 0,
+  "bonesCost": 0,
+  "abilities": [ "Evolve","BuffNeighbours"],
+  "evolve_evolutionName": "beast",
+  "evolve_turnsToEvolve":  1,
+  "appearanceBehaviour": [ "RareCardBackground"],
+  "texture": "beast_awake.png"
+}

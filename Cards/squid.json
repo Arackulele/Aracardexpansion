@@ -1,0 +1,14 @@
+{
+  "name": "Squid",
+  "displayedName": "Inky Squid",
+  "description": "Lurking in the Shadows, the Squid is quite formidable.",
+  "metaCategories": [ "ChoiceNode", "TraderOffer"],
+  "cardComplexity": "Intermediate",
+  "temple": "Nature",
+  "baseAttack": 2,
+  "baseHealth": 1,
+  "cost": 0,
+  "bonesCost": 6,
+  "abilities": [ "Submerge","Sniper"],
+  "texture": "squid.png"
+}

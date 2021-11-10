@@ -1,0 +1,17 @@
+{
+  "name": "beast",
+  "displayedName": "Beast",
+  "description": "Thou shall not awaken this Creature",
+  "metaCategories": [ "ChoiceNode", "TraderOffer"],
+  "cardComplexity": "Intermediate",
+  "temple": "Nature",
+  "baseAttack": 0,
+  "baseHealth": 3,
+  "cost": 2,
+  "bonesCost": 0,
+  "abilities": [ "Evolve"],
+  "evolve_evolutionName": "beast_awake",
+  "evolve_turnsToEvolve":  1,
+  "appearanceBehaviour": [ "RareCardBackground"],
+  "texture": "beast_asleep.png"
+}

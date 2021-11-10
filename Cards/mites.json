@@ -2,7 +2,7 @@
   "name": "Mites",
   "displayedName": "Mites",
   "description": "Small Creatures,i dont think they will be of much use.",
-  "metaCategories": [ "ChoiceNode", "TraderOffer", "Rare" ],
+  "metaCategories": [ "ChoiceNode", "TraderOffer" ],
   "cardComplexity": "Intermediate",
   "temple": "Nature",
   "baseAttack": 1,
