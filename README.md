@@ -23,7 +23,7 @@ Blobfish
 -Moves after the owners turn ends and leaves a squirrel in its former place
 
 Crow
--Reshuffels your hand when places , gives as many cards as currently in your hand
+-Reshuffels your hand when places , gives as many cards as currently in your hand. You cannot draw any Cards after this takes place
 
 Corpsewalker
 -Makes Cards die twice, giving double Bones and making some sigils activate twice
