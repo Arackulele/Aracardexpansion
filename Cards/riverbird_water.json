@@ -1,0 +1,16 @@
+{
+  "name": "riverbird_water",
+  "displayedName": "Riverbird",
+  "description": "The vicious Riverbird,it dives every other Turn to attack directly.",
+  "cardComplexity": "Vanilla",
+  "metaCategories": ["GBCPack"],
+  "temple": "Nature",
+  "baseAttack": 1,
+  "baseHealth": 2,
+  "cost": 1,
+  "bonesCost": 0,
+  "abilities": [ "Evolve","Submerge"],
+  "evolve_evolutionName": "riverbird",
+  "evolve_turnsToEvolve":  1,
+  "texture": "river_bird_water.png"
+}

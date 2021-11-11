@@ -1,6 +1,6 @@
 {
-  "name": "corpsewalker",
-  "displayedName": "Corpsewalker",
+  "name": "deathwalker",
+  "displayedName": "Deathwalker",
   "description": "Akin to the Necromancer, the Corpsewalker makes Cards die twice, it is a little more unpredicatble however.",
   "metaCategories": ["Rare" ],
   "cardComplexity": "Intermediate",

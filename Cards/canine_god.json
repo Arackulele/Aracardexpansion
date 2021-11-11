@@ -1,0 +1,16 @@
+{
+  "name": "canine_god",
+  "displayedName": "Canine God",
+  "description": "Seeing this Creature will make your Bones melt.The Canine God is truly Powerful",
+  "metaCategories": ["Rare" ],
+  "cardComplexity": "Intermediate",
+  "temple": "Nature",
+  "baseAttack": 3,
+  "baseHealth": 1,
+  "cost": 3,
+  "bonesCost": 0,
+  "abilities": [ "PreventAttack"],
+  "appearanceBehaviour": [ "RareCardBackground"],
+  "texture": "canine_god.png",
+  "tribes": [ "Canine" ]
+}
