@@ -1,0 +1,9 @@
+{
+    "name": "AraCardExpansion",
+    "version_number": "1.2.1",
+    "website_url": "https://github.com/Arackulele/Aracardexpansion",
+    "description": "Beeg Card expansion with daily updates maybe.Sifd played this :)",
+    "dependencies": [
+        "API_dev-API-1.10.1"
+    ]
+}
