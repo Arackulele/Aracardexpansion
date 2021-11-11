@@ -1,6 +1,6 @@
 {
   "name": "notbug",
-  "displayedName": "Bug*",
+  "displayedName": "Bug?",
   "description": "Im not quite sure if this is actually a bug.",
   "metaCategories": [ "ChoiceNode", "TraderOffer"],
   "cardComplexity": "Intermediate",
