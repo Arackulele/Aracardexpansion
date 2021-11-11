@@ -1,0 +1,17 @@
+{
+  "name": "Soldier_ant",
+  "displayedName": "Ant Soldier",
+  "description": "A strengthy member of the colony,used to doing the heavy lifting.",
+  "metaCategories": [ "ChoiceNode", "TraderOffer" ],
+  "cardComplexity": "Vanilla",
+  "temple": "Nature",
+  "baseAttack": 0,
+  "baseHealth": 3,
+  "cost": 2,
+  "bonesCost": 0,
+  "abilities": [ "WhackAMole"],
+  "texture": "workerant.png",
+    "traits": ["Ant"],
+    "specialStatIcon": "Ants",
+    "specialAbilities": ["Ant"]
+}

@@ -1,0 +1,15 @@
+{
+  "name": "elk_old",
+  "displayedName": "Old Elk",
+  "description": "huiofrdsguhhuzgtfh",
+  "metaCategories": [""],
+  "cardComplexity": "Intermediate",
+  "temple": "Nature",
+  "baseAttack": 1,
+  "baseHealth": 3,
+  "cost": 0,
+  "bonesCost": 0,
+  "abilities": [ "Strafe"],
+  "texture": "elk_old.png",
+  "tribes": [ "Hooved" ]
+}

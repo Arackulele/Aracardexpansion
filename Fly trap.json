@@ -1,0 +1,14 @@
+{
+  "name": "Fly_trap",
+  "displayedName": "Fly Trap",
+  "description": "Not a creature, but a Plant.Do not tread on it",
+  "metaCategories": [ "ChoiceNode", "TraderOffer"],
+  "cardComplexity": "Vanilla",
+  "temple": "Nature",
+  "baseAttack": 0,
+  "baseHealth": 2,
+  "cost": 0,
+  "bonesCost": 3,
+  "abilities": [ "SteelTrap"],
+  "texture": "flytrap.png"
+}

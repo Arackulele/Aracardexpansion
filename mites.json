@@ -1,0 +1,15 @@
+{
+  "name": "Mites",
+  "displayedName": "Mites",
+  "description": "Small Creatures,i dont think they will be of much use.",
+  "metaCategories": [ "ChoiceNode", "TraderOffer" ],
+  "cardComplexity": "Intermediate",
+  "temple": "Nature",
+  "baseAttack": 1,
+  "baseHealth": 1,
+  "cost": 0,
+  "bonesCost": 1,
+  "abilities": [ "Brittle"],
+  "texture": "mites.png",
+  "tribes": [ "Insect" ]
+}

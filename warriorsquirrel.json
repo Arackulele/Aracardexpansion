@@ -1,0 +1,16 @@
+{
+  "name": "warriorsquirrel",
+  "displayedName": "Warrior Squirrel",
+  "description": "The Squirrels are sick of being sacrificed.",
+  "metaCategories": [ "ChoiceNode", "TraderOffer"],
+  "cardComplexity": "Simple",
+  "temple": "Nature",
+  "baseAttack": 1,
+  "baseHealth": 1,
+  "cost": 1,
+  "bonesCost": 0,
+ "abilities": [ "IceCube" ],
+ "iceCube_creatureWithin": "Squirrel",
+  "texture": "angrysquirrel.png",
+  "tribes": [ "Squirrel" ]
+}

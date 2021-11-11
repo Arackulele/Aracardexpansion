@@ -1,0 +1,17 @@
+{
+  "name": "anthill",
+  "displayedName": "Anthill",
+  "description": "Theres a Bunch of ants hiding in this, their Kingdom will not last for long.",
+  "Trait": [ "Terrain","Uncuttable"],
+  "metaCategories": [ "ChoiceNode", "TraderOffer"],
+  "cardComplexity": "Vanilla",
+  "temple": "Nature",
+  "baseAttack": 0,
+  "baseHealth": 3,
+  "cost": 3,
+  "bonesCost": 0,
+  "abilities": [ "IceCube", "DrawAnt" ],
+  "appearanceBehaviour": [ "TerrainBackground"],
+  "iceCube_creatureWithin": "AntQueen",
+  "texture": "anthill.png"
+}
