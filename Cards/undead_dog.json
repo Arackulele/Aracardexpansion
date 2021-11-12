@@ -1,0 +1,14 @@
+{
+  "name": "undeaddog",
+  "displayedName": "Undead Dog",
+  "description": "The remains of a Guarding Dog, a sad fate awaits it.",
+  "metaCategories": [ "ChoiceNode", "TraderOffer" ],
+  "cardComplexity": "Intermediate",
+  "temple": "Nature",
+  "baseAttack": 1,
+  "baseHealth": 2,
+  "cost": 0,
+  "bonesCost": 5,
+  "abilities": [ "GuardDog","QuadrupleBones"],
+  "texture": "dog.png"
+}
