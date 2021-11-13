@@ -1,0 +1,15 @@
+{
+  "name": "beast_3",
+  "displayedName": "Awoken Beast",
+  "description": "oh my fucking god",
+  "metaCategories": ["GBCPack"],
+  "cardComplexity": "Advanced",
+  "temple": "Nature",
+  "baseAttack": 6,
+  "baseHealth": 6,
+  "cost": 0,
+  "bonesCost": 0,
+  "abilities": [ "Deathtouch","PreventAttack"],
+  "appearanceBehaviour": [ "RareCardBackground"],
+  "texture": "beast_3.png"
+}

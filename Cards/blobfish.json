@@ -6,8 +6,8 @@
   "cardComplexity": "Intermediate",
   "temple": "Nature",
   "baseAttack": 1,
-  "baseHealth": 8,
-  "cost": 3,
+  "baseHealth": 2,
+  "cost": 1,
   "bonesCost": 0,
   "abilities": [ "SquirrelStrafe"],
   "texture": "blobfish.png"

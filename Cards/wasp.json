@@ -1,0 +1,15 @@
+{
+  "name": "wasp",
+  "displayedName": "Wasp",
+  "description": "The prideful Wasp, her underlings are the Bees.",
+  "metaCategories": [ "ChoiceNode", "TraderOffer"],
+  "cardComplexity": "Intermediate",
+  "temple": "Nature",
+  "baseAttack": 1,
+  "baseHealth": 3,
+  "cost": 0,
+  "bonesCost": 6,
+  "abilities": [ "BeesOnHit","Flying"],
+  "tribes": [ "Insect" ],
+  "texture": "Wasp_Insect.png"
+}

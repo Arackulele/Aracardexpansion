@@ -1,5 +1,5 @@
 {
-  "name": "Owl",
+  "name": "owl",
   "displayedName": "Owl",
   "description": "The angry Owl, it is better to not disturb it.",
   "metaCategories": [ "ChoiceNode", "TraderOffer"],
@@ -10,6 +10,6 @@
   "cost": 2,
   "bonesCost": 0,
   "abilities": [ "Sharp", "Flying"],
-  "texture": "fish.png",
+  "texture": "owl.png",
   "tribes": [ "Bird" ]
 }

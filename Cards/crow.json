@@ -1,15 +1,15 @@
 {
-  "name": "Crow",
+  "name": "crow",
   "displayedName": "Crow",
   "description": "The unlucky Crow may prove as a strategical advantage in some cases.",
   "metaCategories": [ "ChoiceNode", "TraderOffer"],
   "cardComplexity": "Intermediate",
   "temple": "Nature",
-  "baseAttack": 2,
+  "baseAttack": 3,
   "baseHealth": 2,
   "cost": 1,
   "bonesCost": 0,
   "abilities": [ "DrawNewHand", "Flying"],
-  "texture": "fish.png",
+  "texture": "crow.png",
   "tribes": [ "Bird" ]
 }
