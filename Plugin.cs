@@ -19,7 +19,7 @@ namespace AraCardExpansion
 	{
 		private const string PluginGuid = "arackulele.inscryption.aracardexpansion";
 		private const string PluginName = "AraCardExpansion";
-		private const string PluginVersion = "1.11";
+		private const string PluginVersion = "1.8.0";
 
 		private void Awake()
 		{
@@ -46,6 +46,7 @@ namespace AraCardExpansion
 			AddMites();
 			Addsmallmoon();
 			Addowl();
+			Addsnake_god();
 			Addriverbird();
 			Addriverbird_water();
 			AddScreeching_ant();
@@ -54,6 +55,7 @@ namespace AraCardExpansion
 			AddSpider();
 			AddSquid();
 			Addsun_priestess();
+			AddThornyDevil();
 			Addtwintailed_lizard();
 			Addreanimator();
 			Addundeaddog();
@@ -120,7 +122,7 @@ namespace AraCardExpansion
 			byte[] imgBytes = System.IO.File.ReadAllBytes(Path.Combine(this.Info.Location.Replace("AraCardExpansion.dll",""),"Artwork/augmented_geck.png"));
 			Texture2D tex = new Texture2D(2,2);
 			tex.LoadImage(imgBytes);
-			NewCard.Add("augmented_geck", metaCategories, CardComplexity.Vanilla, CardTemple.Nature, "Augmented Geck", 1, 4, description:"This is not a Geck, this is THE Geck.", cost:2, tribes:tribes, abilities:abilities, tex:tex);
+			NewCard.Add("augmented_geck", metaCategories, CardComplexity.Vanilla, CardTemple.Nature, "Augmented Geck", 1, 5, description:"This is not a Geck, this is THE Geck.", cost:2, tribes:tribes, abilities:abilities, tex:tex);
 		}
 
 		private void Addbeast()
@@ -291,7 +293,7 @@ namespace AraCardExpansion
 			byte[] imgBytes = System.IO.File.ReadAllBytes(Path.Combine(this.Info.Location.Replace("AraCardExpansion.dll",""),"Artwork/canine_god.png"));
 			Texture2D tex = new Texture2D(2,2);
 			tex.LoadImage(imgBytes);
-			NewCard.Add("canine_god", metaCategories, CardComplexity.Advanced, CardTemple.Nature, "Canine God", 3, 1, description:"Seeing this Creature will make your Bones melt.The Canine God is truly Powerful", cost:3, bonesCost:0, appearanceBehaviour:appearanceBehaviour, tribes:tribes, abilities:abilities, tex:tex);
+			NewCard.Add("canine_god", metaCategories, CardComplexity.Advanced, CardTemple.Nature, "Canine God", 2, 1, description:"Seeing this Creature will make your Bones melt.The Canine God is truly Powerful", cost:3, bonesCost:0, appearanceBehaviour:appearanceBehaviour, tribes:tribes, abilities:abilities, tex:tex);
 		}
 
 		private void AddSnake_corn()
@@ -457,6 +459,25 @@ namespace AraCardExpansion
 			NewCard.Add("owl", metaCategories, CardComplexity.Simple, CardTemple.Nature, "Owl", 2, 2, description:"The angry Owl, it glides down to hit its prey picking off Bones.", cost:2, bonesCost:0, tribes:tribes, abilities:abilities, tex:tex);
 		}
 
+		private void Addsnake_god()
+		{
+			List<CardMetaCategory> metaCategories = new List<CardMetaCategory>();
+			metaCategories.Add(CardMetaCategory.ChoiceNode);
+			metaCategories.Add(CardMetaCategory.TraderOffer);
+
+			List<Tribe> tribes = new List<Tribe>();
+			tribes.Add(Tribe.Reptile);
+
+			List<Ability> abilities = new List<Ability>();
+			abilities.Add(Ability.DeathShield);
+			abilities.Add(Ability.TailOnHit);
+
+			byte[] imgBytes = System.IO.File.ReadAllBytes(Path.Combine(this.Info.Location.Replace("AraCardExpansion.dll",""),"Artwork/snake_god.png"));
+			Texture2D tex = new Texture2D(2,2);
+			tex.LoadImage(imgBytes);
+			NewCard.Add("snake_god", metaCategories, CardComplexity.Advanced, CardTemple.Nature, "Reptile God", 1, 1, description:"The Reptile God,a protector by trait.", bonesCost:4, tribes:tribes, abilities:abilities, tex:tex);
+		}
+
 		private void Addriverbird()
 		{
 			List<CardMetaCategory> metaCategories = new List<CardMetaCategory>();
@@ -597,11 +618,33 @@ namespace AraCardExpansion
 			NewCard.Add("sun_priestess", metaCategories, CardComplexity.Intermediate, CardTemple.Nature, "Sun Priestess", 1, 4, description:"Do not underestimate this being of pure Power.", cost:3, bonesCost:0, appearanceBehaviour:appearanceBehaviour, abilities:abilities, tex:tex);
 		}
 
+		private void AddThornyDevil()
+		{
+			List<CardMetaCategory> metaCategories = new List<CardMetaCategory>();
+			metaCategories.Add(CardMetaCategory.ChoiceNode);
+			metaCategories.Add(CardMetaCategory.TraderOffer);
+
+			List<Tribe> tribes = new List<Tribe>();
+			tribes.Add(Tribe.Reptile);
+
+			List<Ability> abilities = new List<Ability>();
+			abilities.Add(Ability.Sharp);
+			abilities.Add(Ability.Sharp);
+
+			byte[] imgBytes = System.IO.File.ReadAllBytes(Path.Combine(this.Info.Location.Replace("AraCardExpansion.dll",""),"Artwork/thorny_devil.png"));
+			Texture2D tex = new Texture2D(2,2);
+			tex.LoadImage(imgBytes);
+			NewCard.Add("ThornyDevil", metaCategories, CardComplexity.Advanced, CardTemple.Nature, "Thorny Devil", 1, 4, description:"The Defending Thorny Devil, attacking this Beast wont prove as an advantage.", cost:2, tribes:tribes, abilities:abilities, tex:tex);
+		}
+
 		private void Addtwintailed_lizard()
 		{
 			List<CardMetaCategory> metaCategories = new List<CardMetaCategory>();
 			metaCategories.Add(CardMetaCategory.ChoiceNode);
 			metaCategories.Add(CardMetaCategory.TraderOffer);
+
+			List<Tribe> tribes = new List<Tribe>();
+			tribes.Add(Tribe.Reptile);
 
 			List<Ability> abilities = new List<Ability>();
 			abilities.Add(Ability.TailOnHit);
@@ -609,7 +652,7 @@ namespace AraCardExpansion
 			byte[] imgBytes = System.IO.File.ReadAllBytes(Path.Combine(this.Info.Location.Replace("AraCardExpansion.dll",""),"Artwork/twintailed_lizard.png"));
 			Texture2D tex = new Texture2D(2,2);
 			tex.LoadImage(imgBytes);
-			NewCard.Add("twintailed_lizard", metaCategories, CardComplexity.Advanced, CardTemple.Nature, "Twintailed Lizard", 3, 6, description:"The Twintailed Lizard, a creature of Immense Power.", cost:3, abilities:abilities, tex:tex);
+			NewCard.Add("twintailed_lizard", metaCategories, CardComplexity.Advanced, CardTemple.Nature, "Twintailed Lizard", 3, 6, description:"The Twintailed Lizard, a creature of Immense Power.", cost:3, tribes:tribes, abilities:abilities, tex:tex);
 		}
 
 		private void Addreanimator()
