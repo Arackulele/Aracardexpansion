@@ -15,15 +15,17 @@ namespace AraCardExpansion
 {
 	[BepInPlugin(PluginGuid, PluginName, PluginVersion)]
 	[BepInDependency("cyantist.inscryption.api", BepInDependency.DependencyFlags.HardDependency)]
-	public class Plugin : BaseUnityPlugin
+	public partial class Plugin : BaseUnityPlugin
 	{
 		private const string PluginGuid = "arackulele.inscryption.aracardexpansion";
 		private const string PluginName = "AraCardExpansion";
-		private const string PluginVersion = "1.8.0";
+		private const string PluginVersion = "2.0.0";
 
 		private void Awake()
 		{
 			Logger.LogInfo($"Loaded {PluginName}!");
+
+			CreateGodability();
 
 			AddAncient_being();
 			Addanthill();
@@ -32,16 +34,20 @@ namespace AraCardExpansion
 			Addbeast_2();
 			Addbeast_3();
 			Addbig_ant();
+			Addbird_god();
 			AddBlobfish();
 			Addnotbug();
 			AddBullet_ant();
 			Addbush_elk();
-			Addcanine_god();
+			Addcaninegod();
 			AddSnake_corn();
 			Addcrow();
 			Addcorpsewalker();
 			Addelk_old();
 			AddFly_trap();
+			Addtribaltotem();
+			Addhoovedgod();
+			Addinsect_god();
 			AddElk_leader();
 			AddMites();
 			Addsmallmoon();
@@ -49,12 +55,15 @@ namespace AraCardExpansion
 			Addsnake_god();
 			Addriverbird();
 			Addriverbird_water();
+			AddSamurai_ant();
 			AddScreeching_ant();
 			Addsmall_ant();
 			AddSoldier_ant();
 			AddSpider();
 			AddSquid();
+			Addsquirrelgod();
 			Addsun_priestess();
+			Addhole();
 			AddThornyDevil();
 			Addtwintailed_lizard();
 			Addreanimator();
@@ -64,6 +73,7 @@ namespace AraCardExpansion
 			Addwasp();
 		}
 
+       
 		private void AddAncient_being()
 		{
 			List<CardMetaCategory> metaCategories = new List<CardMetaCategory>();
@@ -199,6 +209,25 @@ namespace AraCardExpansion
 			NewCard.Add("big_ant", metaCategories, CardComplexity.Vanilla, CardTemple.Nature, "Giant Ant", 1, 5, description:"True creature of gaming.", cost:1, bonesCost:0, specialStatIcon:SpecialStatIcon.Ants, traits:traits, specialAbilities:specialAbilities, abilities:abilities, tex:tex);
 		}
 
+		private void Addbird_god()
+		{
+			List<CardMetaCategory> metaCategories = new List<CardMetaCategory>();
+			metaCategories.Add(CardMetaCategory.ChoiceNode);
+			metaCategories.Add(CardMetaCategory.TraderOffer);
+
+			List<Tribe> tribes = new List<Tribe>();
+			tribes.Add(Tribe.Reptile);
+
+			List<Ability> abilities = new List<Ability>();
+			abilities.Add(Ability.Flying);
+			abilities.Add(Ability.GemDependant);
+
+			byte[] imgBytes = System.IO.File.ReadAllBytes(Path.Combine(this.Info.Location.Replace("AraCardExpansion.dll",""),"Artwork/flying_god.png"));
+			Texture2D tex = new Texture2D(2,2);
+			tex.LoadImage(imgBytes);
+			NewCard.Add("bird_god", metaCategories, CardComplexity.Advanced, CardTemple.Nature, "God of Flight", 4, 2, description:"The Flying God,gracefully it circles its prey.", bonesCost:2, tribes:tribes, abilities:abilities, tex:tex);
+		}
+
 		private void AddBlobfish()
 		{
 			List<CardMetaCategory> metaCategories = new List<CardMetaCategory>();
@@ -276,7 +305,7 @@ namespace AraCardExpansion
 			NewCard.Add("bush_elk", metaCategories, CardComplexity.Simple, CardTemple.Nature, "Bush Elk", 1, 1, description:"A coward.The Bush Elk does not care for rules", cost:1, bonesCost:0, tribes:tribes, abilities:abilities, tex:tex);
 		}
 
-		private void Addcanine_god()
+		private void Addcaninegod()
 		{
 			List<CardMetaCategory> metaCategories = new List<CardMetaCategory>();
 			metaCategories.Add(CardMetaCategory.Rare);
@@ -289,11 +318,12 @@ namespace AraCardExpansion
 
 			List<Ability> abilities = new List<Ability>();
 			abilities.Add(Ability.PreventAttack);
+			abilities.Add(Ability.GemDependant);
 
 			byte[] imgBytes = System.IO.File.ReadAllBytes(Path.Combine(this.Info.Location.Replace("AraCardExpansion.dll",""),"Artwork/canine_god.png"));
 			Texture2D tex = new Texture2D(2,2);
 			tex.LoadImage(imgBytes);
-			NewCard.Add("canine_god", metaCategories, CardComplexity.Advanced, CardTemple.Nature, "Canine God", 2, 1, description:"Seeing this Creature will make your Bones melt.The Canine God is truly Powerful", cost:3, bonesCost:0, appearanceBehaviour:appearanceBehaviour, tribes:tribes, abilities:abilities, tex:tex);
+			NewCard.Add("caninegod", metaCategories, CardComplexity.Simple, CardTemple.Nature, "Canine God", 4, 1, description:"Seeing this dreaded Creature will melt your Bones, better close your eyes!", cost:2, appearanceBehaviour:appearanceBehaviour, tribes:tribes, abilities:abilities, tex:tex);
 		}
 
 		private void AddSnake_corn()
@@ -386,6 +416,65 @@ namespace AraCardExpansion
 			NewCard.Add("Fly_trap", metaCategories, CardComplexity.Vanilla, CardTemple.Nature, "Fly Trap", 0, 2, description:"Not a creature, but a Plant.Do not tread on it", cost:0, bonesCost:3, abilities:abilities, tex:tex);
 		}
 
+		private void Addtribaltotem()
+		{
+			List<CardMetaCategory> metaCategories = new List<CardMetaCategory>();
+			metaCategories.Add(CardMetaCategory.ChoiceNode);
+			metaCategories.Add(CardMetaCategory.TraderOffer);
+
+			List<Trait> traits = new List<Trait>();
+			traits.Add(Trait.Gem);
+
+			List<Ability> abilities = new List<Ability>();
+			abilities.Add(Ability.GainGemOrange);
+			abilities.Add(Godability.ability);
+
+			byte[] imgBytes = System.IO.File.ReadAllBytes(Path.Combine(this.Info.Location.Replace("AraCardExpansion.dll",""),"Artwork/godtotem.png"));
+			Texture2D tex = new Texture2D(2,2);
+			tex.LoadImage(imgBytes);
+			NewCard.Add("tribaltotem", metaCategories, CardComplexity.Simple, CardTemple.Nature, "Tribal Totem", 0, 3, description:"A log, capable of summoning literal Gods, how did the Woodcarver do this.", cost:1, bonesCost:0, energyCost:0, traits:traits, abilities:abilities, tex:tex);
+		}
+
+		private void Addhoovedgod()
+		{
+			List<CardMetaCategory> metaCategories = new List<CardMetaCategory>();
+			metaCategories.Add(CardMetaCategory.Rare);
+
+			List<CardAppearanceBehaviour.Appearance> appearanceBehaviour = new List<CardAppearanceBehaviour.Appearance>();
+			appearanceBehaviour.Add(CardAppearanceBehaviour.Appearance.RareCardBackground);
+
+			List<Tribe> tribes = new List<Tribe>();
+			tribes.Add(Tribe.Hooved);
+
+			List<Ability> abilities = new List<Ability>();
+			abilities.Add(Ability.StrafePush);
+			abilities.Add(Ability.GemDependant);
+
+			byte[] imgBytes = System.IO.File.ReadAllBytes(Path.Combine(this.Info.Location.Replace("AraCardExpansion.dll",""),"Artwork/hoofed_god.png"));
+			Texture2D tex = new Texture2D(2,2);
+			tex.LoadImage(imgBytes);
+			NewCard.Add("hoovedgod", metaCategories, CardComplexity.Simple, CardTemple.Nature, "Hooved God", 4, 12, description:"A being more wise and more experienced than any other, the Hooved God is not to mess with.", cost:2, appearanceBehaviour:appearanceBehaviour, tribes:tribes, abilities:abilities, tex:tex);
+		}
+
+		private void Addinsect_god()
+		{
+			List<CardMetaCategory> metaCategories = new List<CardMetaCategory>();
+			metaCategories.Add(CardMetaCategory.ChoiceNode);
+			metaCategories.Add(CardMetaCategory.TraderOffer);
+
+			List<Tribe> tribes = new List<Tribe>();
+			tribes.Add(Tribe.Reptile);
+
+			List<Ability> abilities = new List<Ability>();
+			abilities.Add(Ability.TriStrike);
+			abilities.Add(Ability.GemDependant);
+
+			byte[] imgBytes = System.IO.File.ReadAllBytes(Path.Combine(this.Info.Location.Replace("AraCardExpansion.dll",""),"Artwork/Insect_god.png"));
+			Texture2D tex = new Texture2D(2,2);
+			tex.LoadImage(imgBytes);
+			NewCard.Add("insect_god", metaCategories, CardComplexity.Advanced, CardTemple.Nature, "Insect God", 1, 1, description:"The Reptile God, it rules over the Tribe.", bonesCost:4, tribes:tribes, abilities:abilities, tex:tex);
+		}
+
 		private void AddElk_leader()
 		{
 			List<CardMetaCategory> metaCategories = new List<CardMetaCategory>();
@@ -469,13 +558,13 @@ namespace AraCardExpansion
 			tribes.Add(Tribe.Reptile);
 
 			List<Ability> abilities = new List<Ability>();
-			abilities.Add(Ability.DeathShield);
 			abilities.Add(Ability.TailOnHit);
+			abilities.Add(Ability.GemDependant);
 
 			byte[] imgBytes = System.IO.File.ReadAllBytes(Path.Combine(this.Info.Location.Replace("AraCardExpansion.dll",""),"Artwork/snake_god.png"));
 			Texture2D tex = new Texture2D(2,2);
 			tex.LoadImage(imgBytes);
-			NewCard.Add("snake_god", metaCategories, CardComplexity.Advanced, CardTemple.Nature, "Reptile God", 1, 1, description:"The Reptile God,a protector by trait.", bonesCost:4, tribes:tribes, abilities:abilities, tex:tex);
+			NewCard.Add("snake_god", metaCategories, CardComplexity.Advanced, CardTemple.Nature, "Reptile God", 1, 1, description:"The Reptile God, it rules over the Tribe.", bonesCost:4, tribes:tribes, abilities:abilities, tex:tex);
 		}
 
 		private void Addriverbird()
@@ -507,6 +596,24 @@ namespace AraCardExpansion
 			Texture2D tex = new Texture2D(2,2);
 			tex.LoadImage(imgBytes);
 			NewCard.Add("riverbird_water", metaCategories, CardComplexity.Vanilla, CardTemple.Nature, "Riverbird", 1, 2, description:"The vicious Riverbird,it dives every other Turn to attack directly.", cost:1, bonesCost:0, abilities:abilities, tex:tex, evolveId:new EvolveIdentifier("riverbird",1));
+		}
+
+		private void AddSamurai_ant()
+		{
+			List<CardMetaCategory> metaCategories = new List<CardMetaCategory>();
+			metaCategories.Add(CardMetaCategory.ChoiceNode);
+			metaCategories.Add(CardMetaCategory.TraderOffer);
+
+			List<Trait> traits = new List<Trait>();
+			traits.Add(Trait.Ant);
+
+			List<Ability> abilities = new List<Ability>();
+			abilities.Add(Ability.Sniper);
+
+			byte[] imgBytes = System.IO.File.ReadAllBytes(Path.Combine(this.Info.Location.Replace("AraCardExpansion.dll",""),"Artwork/samurai_ant.png"));
+			Texture2D tex = new Texture2D(2,2);
+			tex.LoadImage(imgBytes);
+			NewCard.Add("Samurai_ant", metaCategories, CardComplexity.Vanilla, CardTemple.Nature, "Samurai Ant", 1, 5, description:"A respected Ant species, the Samurai ant has strong armor and even stronger Pincers.", cost:3, bonesCost:0, specialStatIcon:SpecialStatIcon.Ants, traits:traits, abilities:abilities, tex:tex);
 		}
 
 		private void AddScreeching_ant()
@@ -557,13 +664,10 @@ namespace AraCardExpansion
 			List<Ability> abilities = new List<Ability>();
 			abilities.Add(Ability.Sniper);
 
-			List<SpecialTriggeredAbility> specialAbilities = new List<SpecialTriggeredAbility>();
-			specialAbilities.Add(SpecialTriggeredAbility.Ant);
-
 			byte[] imgBytes = System.IO.File.ReadAllBytes(Path.Combine(this.Info.Location.Replace("AraCardExpansion.dll",""),"Artwork/workerant.png"));
 			Texture2D tex = new Texture2D(2,2);
 			tex.LoadImage(imgBytes);
-			NewCard.Add("Soldier_ant", metaCategories, CardComplexity.Vanilla, CardTemple.Nature, "Ant Soldier", 0, 3, description:"A strengthy member of the colony,used to doing the heavy lifting.", cost:2, bonesCost:0, specialStatIcon:SpecialStatIcon.Ants, traits:traits, specialAbilities:specialAbilities, abilities:abilities, tex:tex);
+			NewCard.Add("Soldier_ant", metaCategories, CardComplexity.Vanilla, CardTemple.Nature, "Ant Soldier", 0, 3, description:"A strengthy member of the colony,used to doing the heavy lifting.", cost:2, bonesCost:0, specialStatIcon:SpecialStatIcon.Ants, traits:traits, abilities:abilities, tex:tex);
 		}
 
 		private void AddSpider()
@@ -600,6 +704,25 @@ namespace AraCardExpansion
 			NewCard.Add("Squid", metaCategories, CardComplexity.Intermediate, CardTemple.Nature, "Inky Squid", 2, 1, description:"Lurking in the Shadows, the Squid is quite formidable.", cost:0, bonesCost:6, abilities:abilities, tex:tex);
 		}
 
+		private void Addsquirrelgod()
+		{
+			List<CardMetaCategory> metaCategories = new List<CardMetaCategory>();
+			metaCategories.Add(CardMetaCategory.ChoiceNode);
+			metaCategories.Add(CardMetaCategory.TraderOffer);
+
+			List<Tribe> tribes = new List<Tribe>();
+			tribes.Add(Tribe.Squirrel);
+
+			List<Ability> abilities = new List<Ability>();
+			abilities.Add(Ability.DrawVesselOnHit);
+			abilities.Add(Ability.GemDependant);
+
+			byte[] imgBytes = System.IO.File.ReadAllBytes(Path.Combine(this.Info.Location.Replace("AraCardExpansion.dll",""),"Artwork/Squirrel_GOd.png"));
+			Texture2D tex = new Texture2D(2,2);
+			tex.LoadImage(imgBytes);
+			NewCard.Add("squirrelgod", metaCategories, CardComplexity.Simple, CardTemple.Nature, "God of Squirrels", 1, 10, description:"The God of Squirrels,made up of 1000 Squirrels.It shall not be killed.", cost:1, tribes:tribes, abilities:abilities, tex:tex);
+		}
+
 		private void Addsun_priestess()
 		{
 			List<CardMetaCategory> metaCategories = new List<CardMetaCategory>();
@@ -618,6 +741,24 @@ namespace AraCardExpansion
 			NewCard.Add("sun_priestess", metaCategories, CardComplexity.Intermediate, CardTemple.Nature, "Sun Priestess", 1, 4, description:"Do not underestimate this being of pure Power.", cost:3, bonesCost:0, appearanceBehaviour:appearanceBehaviour, abilities:abilities, tex:tex);
 		}
 
+		private void Addhole()
+		{
+			List<CardMetaCategory> metaCategories = new List<CardMetaCategory>();
+			metaCategories.Add(CardMetaCategory.ChoiceNode);
+			metaCategories.Add(CardMetaCategory.TraderOffer);
+
+			List<Ability> abilities = new List<Ability>();
+			abilities.Add(Ability.Submerge);
+
+			List<SpecialTriggeredAbility> specialAbilities = new List<SpecialTriggeredAbility>();
+			specialAbilities.Add(SpecialTriggeredAbility.Mirror);
+
+			byte[] imgBytes = System.IO.File.ReadAllBytes(Path.Combine(this.Info.Location.Replace("AraCardExpansion.dll",""),"Artwork/hole.png"));
+			Texture2D tex = new Texture2D(2,2);
+			tex.LoadImage(imgBytes);
+			NewCard.Add("hole", metaCategories, CardComplexity.Intermediate, CardTemple.Nature, "The abyss", 0, 1, description:"The abyss, an endless fall.", bonesCost:4, specialStatIcon:SpecialStatIcon.Mirror, specialAbilities:specialAbilities, abilities:abilities, tex:tex);
+		}
+
 		private void AddThornyDevil()
 		{
 			List<CardMetaCategory> metaCategories = new List<CardMetaCategory>();
@@ -629,7 +770,7 @@ namespace AraCardExpansion
 
 			List<Ability> abilities = new List<Ability>();
 			abilities.Add(Ability.Sharp);
-			abilities.Add(Ability.Sharp);
+			abilities.Add(Ability.TailOnHit);
 
 			byte[] imgBytes = System.IO.File.ReadAllBytes(Path.Combine(this.Info.Location.Replace("AraCardExpansion.dll",""),"Artwork/thorny_devil.png"));
 			Texture2D tex = new Texture2D(2,2);
