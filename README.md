@@ -1,27 +1,39 @@
 # Aracardexpansion
-A Card expansion for Part 1 of Inscryption made by me,
-Requires Sigilfix and CardApi to work
+A Card expansion for Part 1 of Inscryption made by me that adds Cards that fit the general Game theme while feeling unique enough to provide a fun new gameplay experience
+Requires CardApi to work , SigilArtPatch is useful to install
 
-# Solved Bugs:
---Evolve Cards are broken-- ( this will probably be fixed in the next few days )
+--It is recommended to enable Mox, energy and Drone in the api Mods config to play with this Mod.--
 
-Black Square Sigils ( not something i can change currently, look below for what each black square sigil card does)
+# Known Issues:
+
+Currently, there are no known issues!
 
 # Update Notes:
 
-Another Update! Tons of Balance and Card change
+Giant Balance Update
+-A lot of Balance
+-About 4 new Cards
+-3 new Sigil ( technically 8 but 6 are because the God totems are changed)
+-New Art
 
 # How to add to the Game
 Step 1:
 Install API, it is a dependency
 
 Step 2:
-Pu the Artwork folder and .dll file into the plugins folder
+Put the Artwork folder and .dll file into the plugins folder
 
 Step 3:
 You are done
 
-#Special thanks to :
-Cyantist for helping me a ton and making JsonToDll
-Cevin_2006 for making Various Card Art
-Mad85 for making BrokenSigilFix and helping me a lot
+# Special thanks to :
+Sifd for showcasing this mod numerous times on his Channel
+
+Cevin_2006 for making about half of the Card Art
+
+Silenceman for epic Code
+
+Cyantist for making the api
+
+Mad95 for helping me a ton with Coding and other stuff
+

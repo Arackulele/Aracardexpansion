@@ -1,10 +1,9 @@
 {
     "name": "AraCardExpansion",
-    "version_number": "1.5.0",
+    "version_number": "3.2.0",
     "website_url": "https://github.com/Arackulele/Aracardexpansion",
-    "description": "Giant Card expansion with 30+ Cards and daily updates maybe.Sifd played this :)",
+    "description": "The most popular Card Expansion , really. Balance Update!",
     "dependencies": [
-        "API_dev-API-1.11.0",
-		"MADH95Mods-SigilArtPatch-1.1.0"
+        "API_dev-API-1.12.1"
     ]
 }
