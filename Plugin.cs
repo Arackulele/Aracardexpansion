@@ -19,7 +19,7 @@ namespace AraCardExpansion
 	{
 		private const string PluginGuid = "arackulele.inscryption.aracardexpansion";
 		private const string PluginName = "AraCardExpansion";
-		private const string PluginVersion = "3.1.0";
+		private const string PluginVersion = "3.1.1";
 
 		private void Awake()
 		{
@@ -333,6 +333,9 @@ namespace AraCardExpansion
 			List<Trait> traits = new List<Trait>();
 			traits.Add(Trait.Ant);
 
+			List<Tribe> tribes = new List<Tribe>();
+			tribes.Add(Tribe.Insect);
+
 			List<Ability> abilities = new List<Ability>();
 			abilities.Add(Ability.SplitStrike);
 
@@ -342,7 +345,7 @@ namespace AraCardExpansion
 			byte[] imgBytes = System.IO.File.ReadAllBytes(Path.Combine(this.Info.Location.Replace("AraCardExpansion.dll",""),"Artwork/giant_ant.png"));
 			Texture2D tex = new Texture2D(2,2);
 			tex.LoadImage(imgBytes);
-			NewCard.Add("big_ant", "Giant Ant", 1, 5, metaCategories, CardComplexity.Vanilla, CardTemple.Nature, description:"True creature of gaming.", bloodCost:1, bonesCost:0, specialStatIcon:SpecialStatIcon.Ants, traits:traits, specialAbilities:specialAbilities, abilities:abilities, defaultTex:tex);
+			NewCard.Add("big_ant", "Giant Ant", 1, 5, metaCategories, CardComplexity.Vanilla, CardTemple.Nature, description:"True creature of gaming.", bloodCost:1, bonesCost:0, specialStatIcon:SpecialStatIcon.Ants, traits:traits, specialAbilities:specialAbilities, abilities:abilities, defaultTex:tex,tribes:tribes);
 		}
 
 		private void Addbird_god()
@@ -406,6 +409,9 @@ namespace AraCardExpansion
 			metaCategories.Add(CardMetaCategory.ChoiceNode);
 			metaCategories.Add(CardMetaCategory.TraderOffer);
 
+			List<Tribe> tribes = new List<Tribe>();
+			tribes.Add(Tribe.Insect);
+
 			List<Trait> traits = new List<Trait>();
 			traits.Add(Trait.Ant);
 
@@ -418,7 +424,7 @@ namespace AraCardExpansion
 			byte[] imgBytes = System.IO.File.ReadAllBytes(Path.Combine(this.Info.Location.Replace("AraCardExpansion.dll",""),"Artwork/bulletant.png"));
 			Texture2D tex = new Texture2D(2,2);
 			tex.LoadImage(imgBytes);
-			NewCard.Add("Bullet_ant","Bullet Ant", 0, 1,  metaCategories, CardComplexity.Intermediate, CardTemple.Nature, description:"An eerie ctreature, seems to enjoy the company of other Ants.", bloodCost:0, bonesCost:6, specialStatIcon:SpecialStatIcon.Ants, traits:traits, specialAbilities:specialAbilities, abilities:abilities, defaultTex:tex);
+			NewCard.Add("Bullet_ant","Bullet Ant", 0, 1,  metaCategories, CardComplexity.Intermediate, CardTemple.Nature, description:"An eerie ctreature, seems to enjoy the company of other Ants.", bloodCost:0, bonesCost:6, specialStatIcon:SpecialStatIcon.Ants, traits:traits, specialAbilities:specialAbilities, abilities:abilities, defaultTex:tex,tribes:tribes);
 		}
 
 		private void Addbush_elk()
@@ -682,6 +688,9 @@ namespace AraCardExpansion
 			metaCategories.Add(CardMetaCategory.ChoiceNode);
 			metaCategories.Add(CardMetaCategory.TraderOffer);
 
+			List<Tribe> tribes = new List<Tribe>();
+			tribes.Add(Tribe.Bird);
+
 			List<Ability> abilities = new List<Ability>();
 			abilities.Add(Ability.Evolve);
 			abilities.Add(Ability.Flying);
@@ -689,13 +698,16 @@ namespace AraCardExpansion
 			byte[] imgBytes = System.IO.File.ReadAllBytes(Path.Combine(this.Info.Location.Replace("AraCardExpansion.dll",""),"Artwork/river_bird_air.png"));
 			Texture2D tex = new Texture2D(2,2);
 			tex.LoadImage(imgBytes);
-			NewCard.Add("riverbird","Riverbird", 1, 2,  metaCategories, CardComplexity.Vanilla, CardTemple.Nature, description:"The vicious Riverbird,it dives every other Turn to attack directly.", bloodCost:1, bonesCost:0, abilities:abilities, defaultTex:tex, evolveId:new EvolveIdentifier("riverbird_water",1));
+			NewCard.Add("riverbird","Riverbird", 1, 2,  metaCategories, CardComplexity.Vanilla, CardTemple.Nature, description:"The vicious Riverbird, it dives every other Turn to attack directly.", bloodCost:1, bonesCost:0, abilities:abilities, defaultTex:tex, evolveId:new EvolveIdentifier("riverbird_water",1), tribes: tribes);
 		}
 
 		private void Addriverbird_water()
 		{
 			List<CardMetaCategory> metaCategories = new List<CardMetaCategory>();
 			metaCategories.Add(CardMetaCategory.GBCPack);
+
+			List<Tribe> tribes = new List<Tribe>();
+			tribes.Add(Tribe.Bird);
 
 			List<Ability> abilities = new List<Ability>();
 			abilities.Add(Ability.Evolve);
@@ -704,7 +716,7 @@ namespace AraCardExpansion
 			byte[] imgBytes = System.IO.File.ReadAllBytes(Path.Combine(this.Info.Location.Replace("AraCardExpansion.dll",""),"Artwork/river_bird_water.png"));
 			Texture2D tex = new Texture2D(2,2);
 			tex.LoadImage(imgBytes);
-			NewCard.Add("riverbird_water", "Riverbird", 1, 2, metaCategories, CardComplexity.Vanilla, CardTemple.Nature, description:"The vicious Riverbird,it dives every other Turn to attack directly.", bloodCost:1, bonesCost:0, abilities:abilities, defaultTex:tex, evolveId:new EvolveIdentifier("riverbird",1));
+			NewCard.Add("riverbird_water", "Riverbird", 1, 2, metaCategories, CardComplexity.Vanilla, CardTemple.Nature, description:"The vicious Riverbird, it dives every other Turn to attack directly.", bloodCost:1, bonesCost:0, abilities:abilities, defaultTex:tex, evolveId:new EvolveIdentifier("riverbird",1),tribes:tribes);
 		}
 
 
@@ -718,6 +730,9 @@ namespace AraCardExpansion
 			List<Trait> traits = new List<Trait>();
 			traits.Add(Trait.Ant);
 
+			List<Tribe> tribes = new List<Tribe>();
+			tribes.Add(Tribe.Insect);
+
 			List<Ability> abilities = new List<Ability>();
 			abilities.Add(Ability.DrawCopy);
 
@@ -727,7 +742,7 @@ namespace AraCardExpansion
 			byte[] imgBytes = System.IO.File.ReadAllBytes(Path.Combine(this.Info.Location.Replace("AraCardExpansion.dll",""),"Artwork/screechant.png"));
 			Texture2D tex = new Texture2D(2,2);
 			tex.LoadImage(imgBytes);
-			NewCard.Add("Screeching_ant", "Screeching Ant", 0, 2, metaCategories, CardComplexity.Advanced, CardTemple.Nature, description:"When this Creature Screams, there will soon be more.", bloodCost:2, bonesCost:0, specialStatIcon:SpecialStatIcon.Ants, traits:traits, specialAbilities:specialAbilities, abilities:abilities, defaultTex:tex);
+			NewCard.Add("Screeching_ant", "Screeching Ant", 0, 2, metaCategories, CardComplexity.Advanced, CardTemple.Nature, description:"When this Creature Screams, there will soon be more.", bloodCost:2, bonesCost:0, specialStatIcon:SpecialStatIcon.Ants, traits:traits, specialAbilities:specialAbilities, abilities:abilities, defaultTex:tex,tribes:tribes);
 		}
 
 		private void Addsmall_ant()
@@ -735,6 +750,9 @@ namespace AraCardExpansion
 			List<CardMetaCategory> metaCategories = new List<CardMetaCategory>();
 			metaCategories.Add(CardMetaCategory.ChoiceNode);
 			metaCategories.Add(CardMetaCategory.TraderOffer);
+
+			List<Tribe> tribes = new List<Tribe>();
+			tribes.Add(Tribe.Insect);
 
 			List<Trait> traits = new List<Trait>();
 			traits.Add(Trait.Ant);
@@ -745,7 +763,7 @@ namespace AraCardExpansion
 			byte[] imgBytes = System.IO.File.ReadAllBytes(Path.Combine(this.Info.Location.Replace("AraCardExpansion.dll",""),"Artwork/tinyant.png"));
 			Texture2D tex = new Texture2D(2,2);
 			tex.LoadImage(imgBytes);
-			NewCard.Add("small_ant", "Tiny Ant", 0, 1, metaCategories, CardComplexity.Vanilla, CardTemple.Nature, description:"A laughable creature,soon it will become a little bit less laughable.", bloodCost:1, bonesCost:0, abilities:abilities, defaultTex:tex, traits: traits, evolveId:new EvolveIdentifier("big_ant",2));
+			NewCard.Add("small_ant", "Tiny Ant", 0, 1, metaCategories, CardComplexity.Vanilla, CardTemple.Nature, description:"A laughable creature,soon it will become a little bit less laughable.", bloodCost:1, bonesCost:0, abilities:abilities, defaultTex:tex, traits: traits, evolveId:new EvolveIdentifier("big_ant",2),tribes:tribes);
 		}
 
 		private void AddSoldier_ant()
@@ -760,13 +778,16 @@ namespace AraCardExpansion
 			List<Ability> abilities = new List<Ability>();
 			abilities.Add(Ability.Sniper);
 
+			List<Tribe> tribes = new List<Tribe>();
+			tribes.Add(Tribe.Insect);
+
 			List<SpecialTriggeredAbility> specialAbilities = new List<SpecialTriggeredAbility>();
 			specialAbilities.Add(SpecialTriggeredAbility.Ant);
 
 			byte[] imgBytes = System.IO.File.ReadAllBytes(Path.Combine(this.Info.Location.Replace("AraCardExpansion.dll",""),"Artwork/workerant.png"));
 			Texture2D tex = new Texture2D(2,2);
 			tex.LoadImage(imgBytes);
-			NewCard.Add("Soldier_ant", "Ant Soldier", 0, 3, metaCategories, CardComplexity.Vanilla, CardTemple.Nature, description:"A strengthy member of the colony,used to doing the heavy lifting.", bloodCost:2, bonesCost:0, specialStatIcon:SpecialStatIcon.Ants, traits:traits, abilities:abilities, defaultTex:tex, specialAbilities: specialAbilities);
+			NewCard.Add("Soldier_ant", "Ant Soldier", 0, 3, metaCategories, CardComplexity.Vanilla, CardTemple.Nature, description:"A strengthy member of the colony,used to doing the heavy lifting.", bloodCost:2, bonesCost:0, specialStatIcon:SpecialStatIcon.Ants, traits:traits, abilities:abilities, defaultTex:tex, specialAbilities: specialAbilities, tribes: tribes);
 		}
 
 		private void AddSpider()
@@ -917,13 +938,16 @@ namespace AraCardExpansion
 			metaCategories.Add(CardMetaCategory.ChoiceNode);
 			metaCategories.Add(CardMetaCategory.TraderOffer);
 
+			List<Tribe> tribes = new List<Tribe>();
+			tribes.Add(Tribe.Canine);
+
 			List<Ability> abilities = new List<Ability>();
 			abilities.Add(Bonestrafe.ability);
 
 			byte[] imgBytes = System.IO.File.ReadAllBytes(Path.Combine(this.Info.Location.Replace("AraCardExpansion.dll",""),"Artwork/dog.png"));
 			Texture2D tex = new Texture2D(2,2);
 			tex.LoadImage(imgBytes);
-			NewCard.Add("undeaddog", "Reanimators Dog", 1, 1, metaCategories, CardComplexity.Intermediate, CardTemple.Nature, description:"The remains of a Guarding Dog, the Reanimator revived it a long time ago.", bloodCost:0, bonesCost:5, abilities:abilities, defaultTex:tex);
+			NewCard.Add("undeaddog", "Reanimators Dog", 1, 1, metaCategories, CardComplexity.Intermediate, CardTemple.Nature, description:"The remains of a Guarding Dog, the Reanimator revived it a long time ago.", bloodCost:0, bonesCost:5, abilities:abilities, defaultTex:tex, tribes:tribes);
 		}
 
 		private void AddVicious_Beaver()
